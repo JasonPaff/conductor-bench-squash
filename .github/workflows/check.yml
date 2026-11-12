@@ -1,0 +1,12 @@
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Slow on purpose: GitHub arms auto-merge only on a PR it can't merge yet.
+      - run: sleep 90
+      - run: echo ok

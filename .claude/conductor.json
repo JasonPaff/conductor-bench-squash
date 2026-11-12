@@ -1,0 +1,19 @@
+// A throwaway profile for ATK-984's landing proof. No daemon conducts it.
+{
+  "name": "bench",
+  "protocol": 2,
+  "baseBranch": "main",
+  "ci": { "kind": "github-actions" },
+  "codeHost": {
+    "kind": "github",
+    "owner": "JasonPaff",
+    "repo": "conductor-bench-squash",
+    "mergeStrategy": "squash",
+    "deleteBranch": true
+  },
+  "gates": ["plan", "merge"],
+  "release": { "handoff": "nothing ships from this repo" },
+  "skills": { "verify": "verify-bench", "work": "conductor:work-item" },
+  "slots": 1,
+  "tracker": { "kind": "github-issues", "key": "BENCH", "humanLabel": "human" }
+}
